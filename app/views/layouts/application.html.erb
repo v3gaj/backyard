@@ -29,50 +29,55 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-        <%= link_to root_path, class: 'navbar-brand' do %>
-          <%= image_tag 'icon.png' %>
-        <% end %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <%= render 'layouts/nav' %>
-        </div>
-        </div>
-      </nav>
-    </header>
-    <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
-      <div class="header-background animation-wrapper"></div>
-    <% end %>
-    <%= yield %>
-    <div id="render-alert">
-        <%= bootstrap_flash %>
-    </div>
-    <footer>
-      <div class="footer-wrapper container">
-        <div class="col-lg-2">
-          <%= render 'layouts/nav' %>
-        </div>
-        <div class="col-lg-4">
-          <ul>
-            <li class="nav-item"><span class="nav-link"><i class="fa fa-phone-square"></i>8888-8888</span></li>
-            <li class="nav-item"><span class="nav-link"><i class="fa fa-envelope"></i><a href="mailto:info@caffora.cafe">info@telescopehr.com</a></span></li>
-            <li class="nav-item"><span class="nav-link"><i class="fa fa-building"></i>Heredia, Costa Rica</span></li>
-          </ul>
-        </div>
-        <div class="col-lg-6 animation2" data-animation="animated zoomIn">
+    <%= image_tag 'icon-logo.png', class: 'back-image' %>
+    <div class="body-wrapper"> 
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container">
           <%= link_to root_path, class: 'navbar-brand' do %>
             <%= image_tag 'icon.png' %>
           <% end %>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <%= render 'layouts/nav' %>
+          </div>
+          </div>
+        </nav>
+      </header>
+      <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
+        <div class="header-background animation-wrapper">
+          <%= image_tag 'back1.jpg' %>
         </div>
+      <% end %>
+      <%= yield %>
+      <div id="render-alert">
+          <%= bootstrap_flash %>
       </div>
-      <div class="copyright">
-        <small>Created by BackyardLinks ©</small>
-      </div>
-    </footer>
+      <footer>
+        <div class="footer-wrapper container">
+          <div class="col-lg-2">
+            <%= render 'layouts/nav' %>
+          </div>
+          <div class="col-lg-4">
+            <ul>
+              <li class="nav-item"><span class="nav-link"><i class="fa fa-phone-square"></i>8888-8888</span></li>
+              <li class="nav-item"><span class="nav-link"><i class="fa fa-envelope"></i><a href="mailto:info@caffora.cafe">info@telescopehr.com</a></span></li>
+              <li class="nav-item"><span class="nav-link"><i class="fa fa-building"></i>Heredia, Costa Rica</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 animation2" data-animation="animated zoomIn">
+            <%= link_to root_path, class: 'navbar-brand' do %>
+              <%= image_tag 'icon.png' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="copyright">
+          <small>Created by BackyardLinks ©</small>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

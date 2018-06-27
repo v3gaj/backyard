@@ -31,6 +31,10 @@
  /************************************GENERAL***********************************/
 
 body{
+    background-color: #008cba;
+}
+
+.body-wrapper{
     -webkit-animation-name: slideInLeft;
     -moz-animation-name: slideInLeft;
     -o-animation-name: slideInLeft;
@@ -44,6 +48,16 @@ body{
     -o-animation-fill-mode: both;
     animation-fill-mode: both;
     animation-delay: .7s;
+    background-color: #fff;
+}
+
+.back-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(100%);
+    opacity: 0.8;
 }
 
 h2{
@@ -238,8 +252,14 @@ h6{
 }
 
 .header-background{
-    background-image: url('back1.jpg');
     border-bottom: 25px solid #008cba;
+    overflow: hidden;
+
+    img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .slide{
