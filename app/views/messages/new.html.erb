@@ -1,0 +1,29 @@
+<%= form_for @message, url: contact_path, :html => { :class => "form-horizontal contact", remote: true } do |message_form| %>
+  <div class="form-group">
+    <div>
+      <%= message_form.text_field :name, :class => 'form-contact form-clear', placeholder: 'Name', :required => true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <%= message_form.email_field :email, :class => 'form-contact form-clear', placeholder: 'Email', :required => true %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div>
+      <%= message_form.text_area :content, :class => 'form-contact form-clear', placeholder: 'Message', rows: 5, :required => true %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div>
+      <%= button_tag(type: "submit", class: "btn btn-primary btn-standard") do %>
+        <%= t('.send') %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div class="message_errors">
+  
+</div>
