@@ -50,6 +50,7 @@
       <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
         <div class="header-background animation-wrapper">
           <%= image_tag 'back1.jpg' %>
+          <div class="header-overlay"></div>
         </div>
       <% end %>
       <%= yield %>

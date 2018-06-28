@@ -43,10 +43,10 @@ body{
     -moz-animation-duration: .6s;
     -o-animation-duration: .6s;
     animation-duration: .6s;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
     animation-delay: .7s;
     background-color: #fff;
 }
@@ -58,6 +58,7 @@ body{
     transform: translate(-50%, -50%);
     filter: invert(100%);
     opacity: 0.8;
+    width: 20%;
 }
 
 h2{
@@ -96,10 +97,18 @@ h6{
 
 .animation{
     animation-delay: 1.3s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
 }
 
 .animation2{
     animation-delay: .5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
 }
 
 .col-lg-4,
@@ -239,19 +248,6 @@ h6{
     -o-background-size: cover;
     background-size: cover;
     background-position: 50% 0;
-
-    &:before{
-        background-color: rgba(0,0,0,.55);
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-}
-
-.header-background{
     border-bottom: 25px solid #008cba;
     overflow: hidden;
 
@@ -260,6 +256,15 @@ h6{
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+.header-overlay{
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .slide{
@@ -681,11 +686,12 @@ h6{
         width: 100%;
     }
 }
-
+c
 .dark-content-wrapper{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .dark-content{
@@ -1168,8 +1174,10 @@ footer{
     }
 }
 
-
-
+.error-wrapper{
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
 
 
 
@@ -1195,83 +1203,6 @@ footer{
 
 
 
-
-.projects-head{
-}
-
-
-
-.service-padding{
-    display: none;
-    margin: 50px 0;
-    color: #515A5F;
-}
-
-.service{
-
-	&:first-child{
-		.service-padding{
-			display: block;
-		}
-	}
-
-    h3{
-        margin-bottom: 50px;
-
-        &:after{
-            display: block;
-            content: '';
-            width: 100%;
-            height: 2px;
-            background: #008cba;
-            position: relative;
-            bottom: -22px;
-            left: 0%;
-        }
-    }
-
-    p{
-        font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        text-align: justify;
-    }
-}
-
-.header-service{
-    background-color: #008cba;
-    cursor: pointer;
-
-    h2{
-        text-align: center;
-        font-weight: 400;
-        color: #fff;
-        padding: 15px 0;
-    }
-}
-
-.service-toogle{
-    cursor: default !important;
-    -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.4);
-    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.4);
-}
-
-.image-service{
-    height: 400px;
-    overflow: hidden;
-    margin-top: 40px;
-    position: relative;
-    margin-left: 15px;
-    margin-right: 15px;
-
-    img{
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-}
 
 .contact-info-wrapper{
     margin-top: 100px;
@@ -1323,6 +1254,8 @@ footer{
 }
 
 .contact-details{
+    margin-bottom: 40px;
+    
     span{
         display: block;
         color: #515A5F;
@@ -1352,125 +1285,65 @@ footer{
     padding-right: 48px;
 }
 
-.parallax-about{
-    background-image: url('about1.jpg');
-    float: left;
-}
-
-.parallax-wrapper{
-    position: static;
-    background-position: 50% 0;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 50%;
-}
-
-.parallax{
-    position: relative;
-    padding: 150px 0;
-    height: 100%;
-}
-
-.overlay-parallax{
-    background-color: rgba(0,0,0,0.55);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.info-parallax{
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    p{
-        font-family: 'Raleway', sans-serif;
-        font-size: 22px;
-        font-weight: 100;
-    }
-
-    h1{
-        padding-bottom: 10px;
-    }
-}
-
-.slider-wrapper{
-    position: relative;
-    overflow: hidden;
-    background-color: rgba(0,0,0, 0.1);
-}
-
-.about-slider-wrapper{
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 50%;
-    right: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    background-color: rgba(0,0,0, 0.1);
-    color: #515A5F;
-}
-
-.about-slider{
-    overflow: hidden;
-
-    .slick-dots{
-        position: relative !important;
-        bottom: 0;
-
-        li{
-            color: #fff;
-            background-color: #fff;
-            border: 1px solid #fff;
-            border-radius: 12px;
-            height: 12px;
-            width: 12px;
-            margin-bottom: 10px;
-
-            button {
-                display: none;
-            }
-        }
-
-        .slick-active{
-
-            background-color: #008cba;
-            border: 1px solid #008cba;
-        }
-    }
-
-    h3{
-        padding-top: 30px;
-        padding-bottom: 10px;
-    }
-
-    p{
-        font-family: 'Raleway', sans-serif;
-        font-size: 22px;
-        padding-bottom: 20px;
-    }
-}
-
-
-footer{
-    
-    
-}
-
 .copyright{
     color: #fff;
     text-align: center;
     background-color: #000;
     padding: 50px 0;
 }
+
+@media (max-width: 992px){
+
+    .hello-information {
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    .service-card-container{
+        margin-bottom: 40px;
+    }
+
+    .light-information-wrapper,
+    .dark-information-wrapper{
+        position: relative;
+        transform: translateY(0%);
+    }
+}
+
+
+@media (max-width: 767px){
+    .home-slider img {
+        height: 100%;
+        width: initial;
+        margin: 0 auto;
+    }
+
+    .home-slider-content{
+        h2{
+            font-size: 60px;
+        }
+    }
+
+    .projects-link-shadow{
+        display: none;
+    }
+
+    .projects-information {
+        margin: 4em 15px;
+    }
+
+    .projects-link{
+        position: relative;
+        left: 0;
+        transform: translateY(-40%);
+        margin-bottom: -100px;
+
+        h4{
+            padding: 40px 0px;
+        }
+    }
+}
+

@@ -40,6 +40,13 @@ $(document).on('turbolinks:load', function() {
 	jQuery(window).scroll(function() {
 	    scroll_anim();
 	});
+
+	$(window).resize( function() {
+		setTimeout(function(){
+			homeSliderHeight();
+		}, 250);
+	});
+	
 	$('html, body').animate({scrollTop: 1}, 'normal');
 
 
