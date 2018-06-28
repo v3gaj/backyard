@@ -101,10 +101,10 @@ h6{
     -moz-animation-delay: 1.2s;
     -o-animation-delay: 1.2s;
     animation-delay: 1.2s;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    -o-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .animation2{
@@ -112,10 +112,10 @@ h6{
     -moz-animation-delay: .3s;
     -o-animation-delay: .3s;
     animation-delay: .3s;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    -o-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .col-lg-4,
@@ -527,6 +527,7 @@ h6{
 
 .service-card-container{
     position: relative;
+    padding-top: 25px;
 
     &:hover{
 
@@ -583,7 +584,7 @@ h6{
 .figure-1{
     position: absolute;
     left: -15px;
-    top: -25px;
+    top: 0px;
     height: 100px;
     width: 100px;
     background-color: #ca5b54;
