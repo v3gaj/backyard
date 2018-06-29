@@ -80,7 +80,7 @@ $(document).on('turbolinks:load', function() {
 
 function scroll_anim() {
     "use strict";
-    var scroll_offset = jQuery(window).scrollTop() + 120;
+    var scroll_offset = jQuery(window).scrollTop() + 40;
     jQuery('[data-animation^="animated"]:not(.animated)').each(function () {
         if (jQuery(this).offset().top < scroll_offset + jQuery(window).height())
             jQuery(this).addClass(jQuery(this).data('animation'));
