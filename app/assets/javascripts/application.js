@@ -58,7 +58,7 @@ $(document).on('turbolinks:load', function() {
           $navbar.removeClass("fixedmenu");
       }
   });
-  animation2();
+  animation();
 	googleMaps();
 
 
@@ -84,7 +84,6 @@ function scroll_anim() {
     jQuery('[data-animation^="animated"]:not(.animated)').each(function () {
         if (jQuery(this).offset().top < scroll_offset + jQuery(window).height())
             jQuery(this).addClass(jQuery(this).data('animation'));
-          jQuery(this).addClass(jQuery(this).data('animation2'));
     });
 }
 
@@ -125,18 +124,20 @@ function testimonialSlider(){
     });
 }
 
-function animation2(){
+function animation(){
 	var array = $( ".animation" ).toArray()
 	var win = $(window).scrollTop() + $(window).height();
 
 	for (var i = 0; i < array.length; i++) {
 		var attribute = $(array[i]).offset().top;
 		if (attribute > win) {
+			$(array[i]).css("opacity", 0);
 			$(array[i]).addClass("animation2");
 			$(array[i]).removeClass("animation");
-			
 		}
 	}
+
+	$('.animation2').css("opacity", 0);
 }
 
 function homeSliderHeight(){
