@@ -62,6 +62,7 @@ $(document).on('turbolinks:load', function() {
   animation();
   projectGallery();
 	lazyMasonry();
+	showAnimation();
 
   if (top.location.pathname === '/contact')
 	{
@@ -84,6 +85,12 @@ $(document).on('turbolinks:load', function() {
 
   
 });
+
+function showAnimation(){
+  setTimeout(function() {
+    $('.home-slider-wrapper').css({ opacity: "1"});
+  }, 1500);
+}
 
 function projectGallery(){
 	$(function(){
