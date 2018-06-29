@@ -200,6 +200,47 @@ h6{
     background-color: transparent !important;
 }
 
+.navbar-toggler {
+    margin: 0;
+    color: #fff !important;
+    font-size: 35px;
+    border: 0px;
+}
+
+.nav-mobile{
+    display: none;
+    background-color: #008cba;
+    overflow: auto;
+    margin-top: 6px;
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+
+        li{
+            text-align: center;
+            border-radius: 3px;
+
+            a{
+                text-decoration: none;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                display: block;
+                color: #fff;
+                padding: 15px;
+            }
+        }
+    }
+
+    .active{
+        background-color: #fff;
+        color: #000 !important;
+        border-radius: 3px;
+    }
+}
+
 .fixedmenu {
     background: #008cba !important;
     z-index: 11;
@@ -854,7 +895,7 @@ c
     background: transparent !important;
 }
 
-.projects-gallery{
+.projects-gallery-wrapper{
     padding-left: 2.5px !important;
     padding-right: 2.5px !important;
 }
@@ -1352,6 +1393,7 @@ footer{
         width: 100%;
         height: 100%;
     }
+
 }
 
 
@@ -1391,5 +1433,11 @@ footer{
         margin: 0 13.5%;
     }
 
+}
+
+@media (min-width: 992px){
+    .nav-mobile {
+        display: none !important;
+    }
 }
 

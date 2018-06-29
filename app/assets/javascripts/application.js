@@ -63,6 +63,7 @@ $(document).on('turbolinks:load', function() {
   projectGallery();
 	lazyMasonry();
 	showAnimation();
+	nav_mobile_toogle();
 
   if (top.location.pathname === '/contact')
 	{
@@ -81,10 +82,17 @@ $(document).on('turbolinks:load', function() {
       }, 1000);
   });
     
-	  
 
   
 });
+
+function nav_mobile_toogle(){
+	$(".navbar-toggler").click(function(){
+  	$(".nav-mobile").slideToggle(function(){
+      $(".nav-mobile").toggleClass("toogle-menu");
+    }).promise().done();	
+  });
+}
 
 function showAnimation(){
   setTimeout(function() {

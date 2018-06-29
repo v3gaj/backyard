@@ -37,15 +37,19 @@
           <%= link_to root_path, class: 'navbar-brand' do %>
             <%= image_tag 'icon.png' %>
           <% end %>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="navbar-toggler">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
 
           <div class="collapse navbar-collapse" id="navbarColor01">
             <%= render 'layouts/nav' %>
           </div>
           </div>
+          <div class="nav-mobile">
+            <%= render 'layouts/nav' %>
+          </div>
         </nav>
+
       </header>
       <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
         <div class="header-background animation-wrapper">
