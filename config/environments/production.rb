@@ -91,4 +91,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.asset_host = 'https://ambartienda.com'
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'ambartienda.com', protocol: 'http' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "gator4142.hostgator.com",
+    port: 465,
+    domain: "ambartienda.com",
+    user_name: "webcontact@tripcustomizers.com",
+    password: "Juan9173.",
+    authentication: :plain,
+    enable_starttls_auto: true,
+    tls: :true,
+    openssl_verify_mode: "none"
+  }
 end

@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'errors/file_not_found'
-  get 'errors/internal_server'
-  get 'errors/unprocessable'
-  get 'file_not_found/internal_server'
-  get 'file_not_found/unprocessable'
   root 'index#home'
   get 'services', to: 'index#services'
   get 'about', to: 'index#about'
   get 'contact', to: 'index#contact'
   get 'portfolio', to: 'index#projects'
+  get 'portfolio/project_backyard', to: 'projects#project_backyard', as: 'project_backyard'
 
   get 'messages/new'
   get 'messages/create'

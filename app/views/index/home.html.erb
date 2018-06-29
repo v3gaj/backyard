@@ -69,28 +69,34 @@
   <div class="container">
     <div class="col-lg-4 animation2" data-animation="animated fadeInUp">
       <div class="service-card-container">
-        <div class="service-card">
-          <span><i class="fas fa-pen-nib"></i></span>
-          <h4>Creative Design</h4>
-        </div>
+        <%= link_to services_path, class: 'link-service-card' do %>
+          <div class="service-card">
+            <span><i class="fas fa-pen-nib"></i></span>
+            <h4>Creative Design</h4>
+          </div>
+        <% end %>
         <div class="figure figure-1"></div>
       </div>
     </div>
     <div class="col-lg-4 animation2" data-animation="animated fadeInUp">
       <div class="service-card-container">
-        <div class="service-card">
-          <span><i class="fas fa-code"></i></span>
-          <h4>Development</h4>
-        </div>
+        <%= link_to services_path, class: 'link-service-card' do %>
+          <div class="service-card">
+            <span><i class="fas fa-code"></i></span>
+            <h4>Development</h4>
+          </div>
+        <% end %>
         <div class="figure figure-2"></div>
       </div>
     </div>
     <div class="col-lg-4 animation2" data-animation="animated fadeInUp">
       <div class="service-card-container">
-        <div class="service-card">
-          <span><i class="fab fa-gg-circle"></i></span>
-          <h4>Branding</h4>
-        </div>
+        <%= link_to services_path, class: 'link-service-card' do %>
+          <div class="service-card">
+            <span><i class="fab fa-gg-circle"></i></span>
+            <h4>Branding</h4>
+          </div>
+        <% end %>
         <div class="figure figure-3"></div>
       </div>  
     </div>

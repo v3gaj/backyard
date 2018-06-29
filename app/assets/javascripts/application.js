@@ -46,6 +46,7 @@ $(document).on('turbolinks:load', function() {
 	$(window).resize( function() {
 		setTimeout(function(){
 			homeSliderHeight();
+			projectsGallery();
 		}, 250);
 	});
 
@@ -60,7 +61,9 @@ $(document).on('turbolinks:load', function() {
   });
 
   animation();
-  
+  projectGallery();
+	lazyMasonry();
+
   if (top.location.pathname === '/contact')
 	{
 	    googleMaps();
@@ -83,6 +86,22 @@ $(document).on('turbolinks:load', function() {
   
 });
 
+function projectGallery(){
+	$(function(){
+	  $('#masonry-container').masonry({
+	    itemSelector: '.box',
+	    isAnimated: !Modernizr.csstransitions,
+	    isFitWidth: true
+	  });
+
+	});
+}
+
+function lazyMasonry(){
+	$('img.lazy').load(function() {
+	    projectGallery();
+	});
+}
 
 function scroll_anim() {
     "use strict";
