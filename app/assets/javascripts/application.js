@@ -131,13 +131,13 @@ function animation(){
 	for (var i = 0; i < array.length; i++) {
 		var attribute = $(array[i]).offset().top;
 		if (attribute > win) {
-			//$(array[i]).css("opacity", 0);
+			$(array[i]).css("opacity", 0);
 			$(array[i]).addClass("animation2");
 			$(array[i]).removeClass("animation");
 		}
 	}
 
-	//$('.animation2').css("opacity", 0);
+	$('.animation2').css("opacity", 0);
 }
 
 function homeSliderHeight(){
