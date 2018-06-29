@@ -49,6 +49,7 @@ body{
     animation-fill-mode: backwards;
     animation-delay: .7s;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .back-image{
@@ -101,10 +102,11 @@ h6{
     -moz-animation-delay: 1.2s;
     -o-animation-delay: 1.2s;
     animation-delay: 1.2s;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    opacity: 1 !important;
 }
 
 .animation2{
@@ -112,10 +114,11 @@ h6{
     -moz-animation-delay: .3s;
     -o-animation-delay: .3s;
     animation-delay: .3s;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    opacity: 1 !important;
 }
 
 .col-lg-4,
