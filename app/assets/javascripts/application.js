@@ -58,9 +58,15 @@ $(document).on('turbolinks:load', function() {
           $navbar.removeClass("fixedmenu");
       }
   });
-  
+
   animation();
-	googleMaps();
+  
+  if (top.location.pathname === '/contact')
+	{
+	    googleMaps();
+	}
+
+	
 
 
 	/* ------- Smooth scroll ------- */
@@ -123,7 +129,7 @@ function testimonialSlider(){
 		infinite: true,
 		speed: 500,
 		autoplay: true,
-  	autoplaySpeed: 4000,
+  	autoplaySpeed: 6000,
   	pauseOnHover: false,
 		cssEase: 'linear'
     });
