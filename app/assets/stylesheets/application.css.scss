@@ -106,19 +106,21 @@ h6{
     -moz-animation-fill-mode: backwards;
     -o-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
-    opacity: 1 !important;
 }
 
 .animation2{
     -webkit-animation-delay: .3s;
+    -khtml-animation-delay: .3s;
     -moz-animation-delay: .3s;
+    -ms-animation-delay: .3s;
     -o-animation-delay: .3s;
     animation-delay: .3s;
     -webkit-animation-fill-mode: backwards;
+    -khtml-animation-fill-mode: backwards;
     -moz-animation-fill-mode: backwards;
+    -ms-animation-fill-mode: backwards;
     -o-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
-    opacity: 1 !important;
 }
 
 .col-lg-4,
@@ -1341,5 +1343,6 @@ footer{
     .light-content {
         margin: 0 13.5%;
     }
+
 }
 
