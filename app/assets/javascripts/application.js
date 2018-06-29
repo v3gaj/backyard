@@ -130,10 +130,11 @@ function animation2(){
 	var win = $(window).scrollTop() + $(window).height();
 
 	for (var i = 0; i < array.length; i++) {
-		var attribute = $(array[i]).height() + $(array[i]).offset().top;
+		var attribute = $(array[i]).offset().top;
 		if (attribute > win) {
 			$(array[i]).addClass("animation2");
 			$(array[i]).removeClass("animation");
+			
 		}
 	}
 }
