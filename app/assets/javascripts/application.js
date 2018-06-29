@@ -46,7 +46,6 @@ $(document).on('turbolinks:load', function() {
 	$(window).resize( function() {
 		setTimeout(function(){
 			homeSliderHeight();
-			projectsGallery();
 		}, 250);
 	});
 
