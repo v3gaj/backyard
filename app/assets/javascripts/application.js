@@ -71,8 +71,7 @@ $(document).on('turbolinks:load', function() {
       }, 1000);
   });
     
-   /*------ MENU Fixed ------*/
-  
+	  
 
   
 });
@@ -80,7 +79,8 @@ $(document).on('turbolinks:load', function() {
 
 function scroll_anim() {
     "use strict";
-    var scroll_offset = jQuery(window).scrollTop() + 70;
+    var scroll_offset = jQuery(window).scrollTop() + 50;
+
     jQuery('[data-animation^="animated"]:not(.animated)').each(function () {
         if (jQuery(this).offset().top < scroll_offset + jQuery(window).height())
             jQuery(this).addClass(jQuery(this).data('animation'));
