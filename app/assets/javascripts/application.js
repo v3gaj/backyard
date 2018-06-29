@@ -130,13 +130,18 @@ function animation(){
 
 	for (var i = 0; i < array.length; i++) {
 		var attribute = $(array[i]).offset().top;
+
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		 	attribute += 40;
+		}
+
+		if (true) {}
 		if (attribute > win) {
 			//$(array[i]).css("opacity", 0);
 			$(array[i]).addClass("animation2");
 			$(array[i]).removeClass("animation");
 		}
 	}
-
 	//$('.animation2').css("opacity", 0);
 }
 
