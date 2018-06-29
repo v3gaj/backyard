@@ -80,7 +80,7 @@ $(document).on('turbolinks:load', function() {
 
 function scroll_anim() {
     "use strict";
-    var scroll_offset = jQuery(window).scrollTop();
+    var scroll_offset = jQuery(window).scrollTop() + 120;
     jQuery('[data-animation^="animated"]:not(.animated)').each(function () {
         if (jQuery(this).offset().top < scroll_offset + jQuery(window).height())
             jQuery(this).addClass(jQuery(this).data('animation'));
@@ -130,10 +130,6 @@ function animation(){
 
 	for (var i = 0; i < array.length; i++) {
 		var attribute = $(array[i]).offset().top;
-
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		 	attribute += 40;
-		}
 
 		if (true) {}
 		if (attribute > win) {
