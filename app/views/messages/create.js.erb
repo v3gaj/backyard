@@ -1,6 +1,6 @@
 <% if @message.errors.any? %>
 	$('.message_errors').html("<%= j (render 'errors') %>");
 <% else %>
-	messages_create_js();
+	$(".form-clear").val('');
 	$('#render-alert').html('<div class="alert fade in alert-success "><button type="button" class="close" data-dismiss="alert">×</button>Email was sent.</div>');
 <% end %>

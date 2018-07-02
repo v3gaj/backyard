@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'messages/new'
   get 'messages/create'
 
+  post 'contact', to: 'messages#create'
+
   #Error routes
   match '/404', to: 'errors#file_not_found', via: :all
   match '/422', to: 'errors#unprocessable', via: :all

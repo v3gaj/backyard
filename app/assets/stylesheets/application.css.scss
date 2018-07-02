@@ -191,6 +191,34 @@ h6{
     }
 }
 
+.alert-danger {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+
+.alert {
+    position: fixed;
+    bottom: -20px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    color: #fff;
+    border-radius: 0;
+    font-family: Oswald,sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    text-align: center;
+    opacity: 1 !important;
+
+    button{
+        color: #fff;
+    }
+}
+
 .navbar {
     position: absolute;
     display: block;
@@ -242,7 +270,7 @@ h6{
 }
 
 .fixedmenu {
-    background: #008cba !important;
+    background: #000 !important;
     z-index: 11;
     position: fixed;
     left: 0;
@@ -759,7 +787,7 @@ h6{
         width: 100%;
     }
 }
-c
+
 .dark-content-wrapper{
     position: absolute;
     top: 50%;
@@ -1249,6 +1277,7 @@ footer{
     .nav-link{
         color: rgba(255, 255, 255, 0.7);
         font-weight: 300;
+        padding-left: 0px !important;
 
         &:hover {
             color: #fff;
@@ -1396,7 +1425,6 @@ footer{
 
 }
 
-
 @media (max-width: 767px){
     .home-slider img {
         height: 100%;
@@ -1431,6 +1459,14 @@ footer{
 
     .light-content {
         margin: 0 13.5%;
+    }
+
+    .footer-wrapper .navbar-brand img{
+        padding-top: 20px;
+    }
+
+    .footer-contact-details{
+        padding-top: 25px;
     }
 
 }
