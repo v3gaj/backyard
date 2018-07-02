@@ -107,7 +107,6 @@ function projectGallery(){
 	$(function(){
 	  $('#masonry-container').masonry({
 	    itemSelector: '.box',
-	    isAnimated: !Modernizr.csstransitions,
 	    isFitWidth: true
 	  });
 
