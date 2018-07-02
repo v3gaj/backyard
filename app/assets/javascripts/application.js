@@ -35,7 +35,7 @@ $(document).on('turbolinks:load', function() {
   homeSlider();
   testimonialSlider();
   $(".slide img").load(function(){
-        homeSliderHeight();
+      homeSliderHeight();
 	});
 	checkGradeient();
 	serviceTabs();
@@ -95,6 +95,9 @@ function nav_mobile_toogle(){
 }
 
 function showAnimation(){
+  setTimeout(function() {
+    $('.main-wrapper').css({ opacity: "1"});
+  }, 1200);
   setTimeout(function() {
     $('.home-slider-wrapper').css({ opacity: "1"});
   }, 1500);

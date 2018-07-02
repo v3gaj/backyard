@@ -30,59 +30,61 @@
 
   <body>
     <%= image_tag 'icon-logo.png', class: 'back-image' %>
-    <div class="body-wrapper"> 
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <div class="container">
-          <%= link_to root_path, class: 'navbar-brand' do %>
-            <%= image_tag 'icon.png' %>
-          <% end %>
-          <div class="navbar-toggler">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </div>
-
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <%= render 'layouts/nav' %>
-          </div>
-          </div>
-          <div class="nav-mobile">
-            <%= render 'layouts/nav' %>
-          </div>
-        </nav>
-
-      </header>
-      <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
-        <div class="header-background animation-wrapper">
-          <%= image_tag 'pex1.jpg' %>
-          <div class="header-overlay"></div>
-        </div>
-      <% end %>
-      <%= yield %>
-      <div id="render-alert">
-          <%= bootstrap_flash %>
-      </div>
-      <footer>
-        <div class="footer-wrapper container">
-          <div class="col-lg-2 col-md-6">
-            <%= render 'layouts/nav' %>
-          </div>
-          <div class="footer-contact-details col-lg-4 col-md-6">
-            <ul>
-              <li class="nav-item"><span class="nav-link"><i class="fa fa-phone-square"></i>8888-8888</span></li>
-              <li class="nav-item"><span class="nav-link"><i class="fa fa-envelope"></i><a href="mailto:info@caffora.cafe">info@telescopehr.com</a></span></li>
-              <li class="nav-item"><span class="nav-link"><i class="fa fa-building"></i>Heredia, Costa Rica</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
+    <div class="body-wrapper">
+      <div class="main-wrapper"> 
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
             <%= link_to root_path, class: 'navbar-brand' do %>
               <%= image_tag 'icon.png' %>
             <% end %>
+            <div class="navbar-toggler">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <%= render 'layouts/nav' %>
+            </div>
+            </div>
+            <div class="nav-mobile">
+              <%= render 'layouts/nav' %>
+            </div>
+          </nav>
+
+        </header>
+        <% if !(params[:controller] == 'index' && params[:action] == 'home') %>
+          <div class="header-background animation-wrapper">
+            <%= image_tag 'pex1.jpg' %>
+            <div class="header-overlay"></div>
           </div>
+        <% end %>
+        <%= yield %>
+        <div id="render-alert">
+            <%= bootstrap_flash %>
         </div>
-        <div class="copyright">
-          <small>Created by BackyardLinks ©</small>
-        </div>
-      </footer>
+        <footer>
+          <div class="footer-wrapper container">
+            <div class="col-lg-2 col-md-6">
+              <%= render 'layouts/nav' %>
+            </div>
+            <div class="footer-contact-details col-lg-4 col-md-6">
+              <ul>
+                <li class="nav-item"><span class="nav-link"><i class="fa fa-phone-square"></i>8888-8888</span></li>
+                <li class="nav-item"><span class="nav-link"><i class="fa fa-envelope"></i><a href="mailto:info@caffora.cafe">info@telescopehr.com</a></span></li>
+                <li class="nav-item"><span class="nav-link"><i class="fa fa-building"></i>Heredia, Costa Rica</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <%= link_to root_path, class: 'navbar-brand' do %>
+                <%= image_tag 'icon.png' %>
+              <% end %>
+            </div>
+          </div>
+          <div class="copyright">
+            <small>Created by BackyardLinks ©</small>
+          </div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
